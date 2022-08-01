@@ -1,0 +1,13 @@
+[Unit]
+Description=firewallapi
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/opt/firewall_control
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
